@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick e Morty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- logo e botões -->
+    <div id="main">
+      <img
+        src="./Rick_and_Morty_logo.png"
+        alt="Rick_and_Morty_logo"
+        class="image"
+      />
+      <h1 class="title">Characters</h1>
+
+      <form class="form" onsubmit="searchCharacteres(evento)">
+        <input type="text" placeholder="Search" id="campo-pesquisa" required />
+      </form>
+    </div>
+
+    <!-- recebe os personagens -->
+    <div class="container"></div>
+
+    <!-- modal que vai apresentar as demais caracteristicas dos personagens -->
+    <dialog class="modal">
+      <img id="modal-image" class="images" />
+      <div class="card-bodyy">
+        <h5 class="card-title" id="name"></h5>
+        <p class="card-text" id="status">Estatus: <b></b></p>
+        <p class="card-text" id="species">Especie: <b></b></p>
+        <p class="card-text" id="gender">Genero: <b></b></p>
+      </div>
+      <button id="fechar">fechar</button>
+    </dialog>
+    
+    <script src="./rick.js"></script>
+  </body>
+</html>
